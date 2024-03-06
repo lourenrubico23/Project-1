@@ -37,6 +37,7 @@
             left: 50%;
             transform: translateX(-50%);
             color: $clr-neutral;
+            text-align: center;
         }
         &:hover img{
             transform: scale(1.2);

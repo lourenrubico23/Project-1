@@ -57,21 +57,22 @@ h1 {
 .header__wrapper .toggle__button span {
   display: block;
   width: 3.5rem;
+  content: " ";
   height: 0.5rem;
   background-color: #db0007;
   margin-bottom: 0.5rem;
 }
 .header .dropdown {
-  position: relative;
+  position: fixed;
   background: rgba(255, 255, 255, 0.8);
-  z-index: 999999;
+  z-index: 9999;
   height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
 }
 .header .dropdown button {
-  background: transparent;
+  background-color: transparent;
   border: none;
   font-size: 3rem;
   color: #ffbc0d;
@@ -166,7 +167,7 @@ h1 {
   border: none;
 }
 .tns-outer .tns-nav button.tns-nav-active {
-  background: #db0007;
+  background-color: #db0007;
 }
 
 .banner img {
@@ -203,6 +204,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   color: #ffffff;
+  text-align: center;
 }
 .cards .card:hover img {
   transform: scale(1.2);

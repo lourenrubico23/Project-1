@@ -1,0 +1,40 @@
+@use '../abstract' as *;
+
+/* Colors */
+$colors: (
+    "primary": $clr-primary,
+    "accent": $clr-accent,
+    "neutral": $clr-neutral,
+    "dark": $clr-dark,
+);
+
+@each $key, $val in $colors{
+    .bg-#{$key} {
+        background-color: #{$val};
+    }
+    .text-#{$key}{
+        color: #{$val};
+    }
+}
+
+/* Displays */
+$displays: flex, grid, block, inline;
+
+@each $display in $displays{
+    .#{$display} {
+        display: #{$display};
+    }
+}
+
+/* Loop of Margin */
+@for $i from 1 through 10 {
+    .mb-#{$i} {
+        margin-bottom: #{$i}rem;
+    }
+    .mx-#{$i} {
+        margin: 0 #{$i}rem;
+    }
+    .p-#{$i} {
+        padding: #{$i}rem;
+    }
+}

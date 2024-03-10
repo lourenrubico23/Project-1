@@ -1,65 +1,42 @@
-@use '../base' as *;
-@use '../layout' as *;
 @use '../abstract' as *;
-@use '../vendor' as *;
+@use '../component' as *;
 
-.banner{
-    min-height: 40rem;
-    @include flex(center,center);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    img{
-        @include imgCover(20rem,100%);
-        @include mediaQuery{ 
-            height: 40rem;
-        }
-    
-    }
-    h1{
-        font-size: clamp(3rem, 10vw, 7rem);
-        font-weight: bold;
-    }
-}
-
-.banner--activities{
-    background-image: url('../../img/activities/ActivitiesBanner-sm.jpeg');
+.banner--activity {
+    background-image: url('../../images/activities/activity-banner-sm.jpeg');
     @include mediaQuery {
-        background-image: url('../../img/activities/ActivitiesBanner.jpeg');
+        background-image: url('../../images/activities/activity-banner.jpeg');
     }
 }
 
-.activities {
-    padding: 5rem 0;
-    
-    &__img {
-        position: relative;
-        border-radius: 3rem;
-        width: 100%;
-        height: 100%;
-        img{
-            border-radius: 3rem;
-        }
-        @include mediaQuery{
-            width: 100%;
-            height: 100%;
-        }
-        &__details{
-            h2{
-            font-size: clamp(3rem, 10vw, 7rem);
-            font-weight: bold;
-        }
-        
+.activity {
+    &__card {
+        @include mediaQuery {
+            @include unevenGrid(1fr 2fr, 5rem); 
+            margin-bottom: 5rem;
+
         }
 
-    }
-    &__details{
-        p{
-            margin-bottom: 0;
-            text-align: justify;
-            @include mediaQuery{
-                font-size: 1.4rem;
-                min-height: 20rem;
+        &__content {
+            display: flex;
+            flex-direction: column;
+            div {
+                flex-grow: 1;
+            }
+
+        }
+        img {
+            @include imgCover(100%, 100%);
+            border-radius: 1rem;
+        }
+
+
+        h2 {
+            font-size: clamp(2rem, 8vw, 4rem);
+        }
+
+        .btn {
+            @include mediaQuery {
+                width: 50%
             }
         }
     }

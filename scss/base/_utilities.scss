@@ -26,6 +26,14 @@ $displays: flex, grid, block, inline;
     }
 }
 
+$alignments: left, center, right, justify;
+
+@each $alignments in $alignments{
+    .text-#{$alignments} {
+        text-align: #{$alignments};
+    }
+}
+
 /* Loop of Margin */
 @for $i from 1 through 10 {
     .mb-#{$i} {
@@ -36,5 +44,21 @@ $displays: flex, grid, block, inline;
     }
     .p-#{$i} {
         padding: #{$i}rem;
+    }
+    .py-#{$i} {  
+        padding: 0 #{$i}rem;
+    }
+}
+
+$width: (
+    "full" : 100%,
+    "1-2": 90%,
+    "1-4": 25,
+    "1-3": 33.3%,
+);
+
+@each $key, $val in $width{
+    .w-#{$key} {
+        width: #{$val};
     }
 }

@@ -2,9 +2,9 @@
 @use '../component' as *;
 
 .banner--activity {
-    background-image: url('../../images/activities/activity-banner-sm.jpeg');
+    background-image: url('../../img/activities/ActivitiesBanner-sm.jpeg');
     @include mediaQuery {
-        background-image: url('../../images/activities/activity-banner.jpeg');
+        background-image: url('../../img/activities/ActivitiesBanner.jpeg');
     }
 }
 

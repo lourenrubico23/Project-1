@@ -22,7 +22,7 @@
     &-#{$key} {
         background: #{$val};
         &:hover {
-            background: darken($val, 20);
+            background: #{$val};
         }
     }
 }

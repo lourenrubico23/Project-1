@@ -2,9 +2,9 @@
 @use '../component' as *;
 
 .banner--nextgen {
-    background-image: url('../../images/nextgen/banner-nextgen-sm.jpg');
+    background-image: url('../../img/nextgen/banner-nextgen-sm.jpg');
     @include mediaQuery {
-        background-image: url('../../images/nextgen/banner-nextgen.jpg');
+        background-image: url('../../img/nextgen/banner-nextgen.jpg');
     }
 }
 
